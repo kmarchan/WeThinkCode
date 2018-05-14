@@ -1,0 +1,7 @@
+:set number
+:syntax on
+:highlight ColourColumn ctermbg=magenta
+:call matchadd('ColorColumn','\%81v', 100)
+:set ruler
+":set cursorline"
+:set autoindent
