@@ -1,3 +1,0 @@
-
-alias comp="gcc -Wall -Werror -Wextra"
-alias repp="https://github.com/kmarchan/WeThinkCode"
