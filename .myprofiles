@@ -1,0 +1,2 @@
+
+alias comp="gcc -Wall -Werror -Wextra"
