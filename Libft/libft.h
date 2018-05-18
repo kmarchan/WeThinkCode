@@ -27,7 +27,8 @@ void	ft_putnbr(int n);
 char	*ft_strdup(char *src);
 size_t	ft_strlen(const char *s);
 int	ft_isalpha(int c);
-int	ft_isdigit(int c)
+int	ft_isdigit(int c);
+int	ft_isalnum(int c);
 int	ft_atoi(const char *s);
 int	ft_strcmp(char *s1, char *s2);
 
