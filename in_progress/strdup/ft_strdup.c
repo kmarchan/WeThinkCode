@@ -1,24 +1,33 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/18 08:39:05 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/18 08:50:52 by kmarchan         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-#include "libft.h"
+/*****************************************************************************/
+/****************************  FT_STRDUP.C  **********************************/
+/*****************************************************************************/
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-void	ft_putstr(const char *s)
+char *ft_strdup(char *src)
 {
-	int i;
-
-	i = 0;
-	while (s[i] != '\0')
+	int len = 0;
+	int i = 0;
+	char *str;
+	while (src[len] != '\0')
 	{
-		ft_putchar(s[i]);
+		len++;
+	}
+	str = malloc (len +1);
+	while (src[i] != '\0')
+	{
+		str[i] = src[i];
 		i++;
 	}
+	return (str);
+}
+
+int main(void)
+{
+	char *src = "hello";
+	char *str = 0; 
+	str = ft_strdup(src);
+	printf("src = %s\n", src);
+	printf("str = %s\n", str);
 }
