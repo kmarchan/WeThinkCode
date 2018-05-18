@@ -25,5 +25,6 @@ void	ft_putendl(const char *s);
 void	ft_putstr(const char *s);
 void	ft_putnbr(int n);
 size_t	ft_strlen(const char *s);
+int	ft_atoi(const char *s);
 
 #endif
