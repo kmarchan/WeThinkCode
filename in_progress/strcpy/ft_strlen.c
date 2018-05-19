@@ -6,11 +6,10 @@
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 17:49:19 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/18 07:46:53 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/05/18 08:39:59 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
 #include <string.h>
 
 size_t	ft_strlen(const char *s)
@@ -24,5 +23,3 @@ size_t	ft_strlen(const char *s)
 	}
 	return (size);
 }
-
-

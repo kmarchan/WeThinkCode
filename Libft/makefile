@@ -3,6 +3,7 @@ NAME=	libft.a
 SRC=	ft_putstr.c ft_putchar.c ft_putnbr.c ft_memset.c ft_putendl.c \
 	ft_bzero.c ft_memcpy.c ft_strlen.c ft_atoi.c ft_strcmp.c ft_strdup.c \
 	ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
+	ft_strcpy.c
 
 OBJ=	*.o
 

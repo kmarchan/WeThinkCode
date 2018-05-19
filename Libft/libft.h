@@ -24,6 +24,7 @@ void	ft_putchar(char c);
 void	ft_putendl(const char *s);
 void	ft_putstr(const char *s);
 void	ft_putnbr(int n);
+char	*ft_strcpy(char *des, char *src);
 char	*ft_strdup(char *src);
 size_t	ft_strlen(const char *s);
 int	ft_isalpha(int c);
