@@ -26,17 +26,12 @@ void	ft_putstr(const char *s);
 void	ft_putnbr(int n);
 char	*ft_strcpy(char *des, char *src);
 char	*ft_strdup(char *src);
-char	*ft_strrev(char *s);
 size_t	ft_strlen(const char *s);
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
 int	ft_isalnum(int c);
 int	ft_isascii(int c);
 int	ft_isprint(int c);
-int	ft_isupper(int c);
-int	ft_islower(int c);
-int	ft_toupper(int c);
-int	ft_tolower(int c);
 int	ft_atoi(const char *s);
 int	ft_strcmp(char *s1, char *s2);
 
