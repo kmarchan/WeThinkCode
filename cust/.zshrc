@@ -1,3 +1,3 @@
 export HOME=/sgoinfre/kmarchan
-source ~/WeThinkCode/cust/.myprofiles
+source /sgoinfre/kmarchan/WeThinkCode/cust/.myprofiles
 cd

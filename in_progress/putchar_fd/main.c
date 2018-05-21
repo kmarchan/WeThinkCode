@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/21 14:47:11 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/21 14:50:43 by kmarchan         ###   ########.fr       */
+/*   Created: 2018/05/21 14:33:31 by kmarchan          #+#    #+#             */
+/*   Updated: 2018/05/21 14:37:18 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdlib.h"
+#include "libft.h"
 
-char	*ft_strdup(const char *src)
+int	main()
 {
-	unsigned int	i;
-	char			*str;
-
-	i = 0;
-	str = malloc(ft_strlen(src));
-	while (src[i] != '\0')
-	{
-		str[i] = src[i];
-		i++;
-	}
-	return (str);
+	char *s;
+	int fd = 
 }

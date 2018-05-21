@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/21 14:47:11 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/21 14:50:43 by kmarchan         ###   ########.fr       */
+/*   Created: 2018/05/21 13:56:42 by kmarchan          #+#    #+#             */
+/*   Updated: 2018/05/21 14:27:53 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdlib.h"
+//#include "libft.h"
 
-char	*ft_strdup(const char *src)
+char	*ft_strstr(char *str, char *to_find)
 {
-	unsigned int	i;
-	char			*str;
+	int s; 
+	int f;
 
-	i = 0;
-	str = malloc(ft_strlen(src));
-	while (src[i] != '\0')
+	s = 0;
+	while (str[s] != '\0')
 	{
-		str[i] = src[i];
-		i++;
+		f = 0;
+		while (to_find[f] == str[s + f])
+		{
+			if (to_find[f + 1] == '\0')
+			{
+					return (str +s);
+			}
+			f++;
+		}
+		s++;
 	}
-	return (str);
+	return (to_find);
 }
