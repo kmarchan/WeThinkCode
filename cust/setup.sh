@@ -1,6 +1,7 @@
 #!/bin/sh
 
-ln -s /sgoinfre/kmarchan/gitfile/cust/.myvimrc /goinfre/kmarchan
-ln -s /sgoinfre/kmarchan/gitfile/cust/.zshrc /goinfre/kmarchan
+ln -s -i /sgoinfre/kmarchan/WeThinkCode/cust/.myvimrc /goinfre/kmarchan
+ln -s -i /sgoinfre/kmarchan/WeThinkCode/cust/.zshrc /goinfre/kmarchan
 export HOME=/sgoinfre/kmarchan/
+cd
 pwd
