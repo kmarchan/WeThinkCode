@@ -7,7 +7,11 @@ int	main(void)
 {
 	char src[] = "hello";
 	char dest[] = "gobye";
+	char src1[] = "hello";
+	char dest1[] = "gobye";
 	ft_memcpy(dest, src, 6);
-	printf("dest = %s\n", dest); 
+	memcpy(dest1, src1, 6);
+	printf("ft_dest = %s\n", dest); 
+	printf("c._dest = %s\n", dest1); 
 	return (0);
 }

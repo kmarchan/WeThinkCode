@@ -9,5 +9,5 @@ void	*ft_memset(void *s, int c, size_t n)
 	{
 		p[n] = c;
 	}
-	return (0);
+	return (p);
 }

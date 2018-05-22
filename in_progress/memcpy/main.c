@@ -3,12 +3,12 @@
 
 int main()
 {
-	char *msg = "This is the string: not copied";
-
-    char buffer[80];
-	memset( buffer, '\0', 80 );
-    printf("%p\n",memccpy( buffer, msg, ':', 80 ));
-    printf( "%s\n", buffer );
+	const char src[50] = "This is the string: not copied";
+	char dest[50];
+	strcpy(dest, "helooooo!!");
+    	printf("before memcpy dest = %s\n", dest);
+	memcpy(dest, src, strlen(src)+1);
+	printf("after memcpy dest = %s\n", dest);
 
      return(0);
 }
