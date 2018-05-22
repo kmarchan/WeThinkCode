@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/21 14:51:07 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/22 08:31:33 by kmarchan         ###   ########.fr       */
+/*   Created: 2018/05/22 09:46:07 by kmarchan          #+#    #+#             */
+/*   Updated: 2018/05/22 09:57:27 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strcmp(char *s1, char *s2)
+int	main()
 {
-	int i;
-
-	i = 0;
-	while (s1[i] == s2[i] && ((s1[i] != '\0') || (s2[i] != '\0')))
-	{
-		i++;
-	}
-	return (s1[i] - s2[i]);
+	char str[] = "fluffy";
+	char find[] = "uf";
+	ft_putstr(ft_strnstr(str, find, 3));
+	ft_putstr(strnstr(str, find, 3));
+	return (0);
 }

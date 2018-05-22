@@ -6,7 +6,7 @@
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 14:15:52 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/22 07:46:09 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/05/22 09:56:22 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ void	ft_putnbr(int n);
 char	*ft_strcpy(char *des, char *src);
 char	*ft_strdup(const char *src);
 char	*ft_strrev(char *s);
+char	*ft_strstr(char *str, char *to_find);
+char	*ft_strnstr(const char *hay, const char *ned, size_t n);
 size_t	ft_strlen(const char *s);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

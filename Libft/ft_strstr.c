@@ -6,7 +6,7 @@
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 13:56:42 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/22 07:59:20 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/05/22 10:04:36 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ char	*ft_strstr(char *str, char *to_find)
 		}
 		s++;
 	}
-	return (to_find);
+	return (NULL);
 }
