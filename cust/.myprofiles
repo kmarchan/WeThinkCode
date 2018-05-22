@@ -1,3 +1,5 @@
 
 alias comp="gcc -Wall -Werror -Wextra"
 alias repp="https://github.com/kmarchan/WeThinkCode"
+alias lh="ln -s /sgoinfre/kmarchan/WeThinkCode/Libft/libft.h"
+alias la="ln -s /sgoinfre/kmarchan/WeThinkCode/Libft/libft.a"

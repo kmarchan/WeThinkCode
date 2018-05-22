@@ -6,7 +6,7 @@
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 14:15:52 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/21 13:56:09 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/05/22 07:46:09 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	ft_bzero(void *b, size_t n);
 void	ft_putchar(char c);
 void	ft_putendl(const char *s);
-void	ft_putstr(char *s);
+void	ft_putstr(const char *s);
 void	ft_putnbr(int n);
 char	*ft_strcpy(char *des, char *src);
-char	*ft_strdup(char *src);
+char	*ft_strdup(const char *src);
 char	*ft_strrev(char *s);
 size_t	ft_strlen(const char *s);
 int		ft_isalpha(int c);
