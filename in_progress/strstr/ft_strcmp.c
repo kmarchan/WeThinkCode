@@ -1,42 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/22 07:56:15 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/22 14:24:36 by kmarchan         ###   ########.fr       */
+/*   Created: 2018/05/21 14:51:07 by kmarchan          #+#    #+#             */
+/*   Updated: 2018/05/22 08:31:33 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *hay, const char *ned, size_t n)
+int	ft_strcmp(char *s1, char *s2)
 {
-	size_t s;
-	size_t f;
+	int i;
 
-	s = 0;
-	if (ft_strcmp(ned, "") == 0)
+	i = 0;
+	while (s1[i] == s2[i] && ((s1[i] != '\0') || (s2[i] != '\0')))
 	{
-		return ((char *)hay);
+		i++;
 	}
-	else
-	{
-		while (hay[s] != '\0' && s < n--)
-		{
-			f = 0;
-			while (ned[f] == hay[s + f])
-			{
-				if (ned[f + 1] == '\0')
-				{
-					return ((char *)hay + s);
-				}
-				f++;
-			}
-			s++;
-		}
-	}
-	return (NULL);
+	return (s1[i] - s2[i]);
 }

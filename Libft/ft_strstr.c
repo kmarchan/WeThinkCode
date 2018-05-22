@@ -6,7 +6,7 @@
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 13:56:42 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/22 10:04:36 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/05/22 14:39:46 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,33 @@
 
 char	*ft_strstr(char *str, char *to_find)
 {
-	int s;
+	int s; 
 	int f;
 
 	s = 0;
-	while (str[s] != '\0')
+	if (ft_strcmp(to_find, "") == 0)
 	{
-		f = 0;
-		while (to_find[f] == str[s + f])
-		{
-			if (to_find[f + 1] == '\0')
-			{
-				return (str + s);
-			}
-			f++;
-		}
-		s++;
+		return ((char *)str);
 	}
-	return (NULL);
+	if (ft_strcmp(str, "") == 0)
+	{
+		return (NULL);
+	}
+	else
+	{
+		while (str[s] != '\0')
+		{
+			f = 0;
+			while (to_find[f] == str[s + f])
+			{
+				if (to_find[f + 1] == '\0')
+				{
+						return (str +s);
+				}
+				f++;
+			}
+			s++;
+		}
+	}
+	return (to_find);
 }

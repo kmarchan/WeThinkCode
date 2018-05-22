@@ -6,7 +6,7 @@
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 07:56:15 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/22 13:10:31 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/05/22 14:17:23 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,25 @@ char	*ft_strnstr(const char *hay, const char *ned, size_t n)
 	size_t f;
 
 	s = 0;
-	while (hay[s] != '\0' && s < n--)
+	if (strcmp(ned, "") == 0)
 	{
-		f = 0;
-		while (ned[f] == hay[s + f])
+		return ((char *)hay);
+	}
+	else
+	{
+		while (hay[s] != '\0' && s < n--)
 		{
-			if (ned[f + 1] == '\0')
+			f = 0;
+			while (ned[f] == hay[s + f])
 			{
-				return ((char *)hay + s);
+				if (ned[f + 1] == '\0')
+				{
+					return ((char *)hay + s);
+				}
+				f++;
 			}
-			f++;
+			s++;
 		}
-		s++;
 	}
 	return (NULL);
 }
