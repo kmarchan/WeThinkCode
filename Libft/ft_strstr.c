@@ -6,15 +6,15 @@
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 13:56:42 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/21 14:27:53 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/05/22 07:59:20 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
+#include "libft.h"
 
 char	*ft_strstr(char *str, char *to_find)
 {
-	int s; 
+	int s;
 	int f;
 
 	s = 0;
@@ -25,7 +25,7 @@ char	*ft_strstr(char *str, char *to_find)
 		{
 			if (to_find[f + 1] == '\0')
 			{
-					return (str +s);
+				return (str + s);
 			}
 			f++;
 		}

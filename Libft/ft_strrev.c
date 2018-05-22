@@ -1,14 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/05/22 08:13:27 by kmarchan          #+#    #+#             */
+/*   Updated: 2018/05/22 08:14:26 by kmarchan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strrev(char *s)
 {
-	int len;
-	int i;
-	char rep;
+	int		len;
+	int		i;
+	char	rep;
 
 	len = 0;
 	i = 0;
-	len = (ft_strlen(s) -1);
+	len = (ft_strlen(s) - 1);
 	while (i < len)
 	{
 		rep = s[i];
