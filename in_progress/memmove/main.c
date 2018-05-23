@@ -7,7 +7,7 @@ int main()
 	char dest[50];
 	strcpy(dest, "helkjadhgfklajhdlkjfhsdkljfhalkjdhfklajshdfoooo!!");
     	printf("before memcpy dest = %s\n", dest);
-	memcpy(dest, src, strlen(src)+1);
+	memcpy(dest, src, strlen(dest)+1);
 	printf("after memcpy dest = %s\n", dest);
 
      return(0);
