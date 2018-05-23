@@ -6,26 +6,22 @@
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 13:56:42 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/22 14:39:46 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/05/23 08:29:33 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(char *str, char *to_find)
+char	*ft_strstr(const char *str, const char *to_find)
 {
-	int s; 
-	int f;
+	size_t s;
+	size_t f;
 
 	s = 0;
 	if (ft_strcmp(to_find, "") == 0)
-	{
 		return ((char *)str);
-	}
 	if (ft_strcmp(str, "") == 0)
-	{
 		return (NULL);
-	}
 	else
 	{
 		while (str[s] != '\0')
@@ -35,12 +31,12 @@ char	*ft_strstr(char *str, char *to_find)
 			{
 				if (to_find[f + 1] == '\0')
 				{
-						return (str +s);
+					return ((char *)str + s);
 				}
 				f++;
 			}
 			s++;
 		}
 	}
-	return (to_find);
+	return (NULL);
 }

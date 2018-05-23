@@ -6,7 +6,7 @@
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/22 07:56:15 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/22 14:17:23 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/05/23 08:02:20 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strnstr(const char *hay, const char *ned, size_t n)
 	size_t f;
 
 	s = 0;
-	if (strcmp(ned, "") == 0)
+	if (ft_strcmp(ned, "") == 0)
 	{
 		return ((char *)hay);
 	}

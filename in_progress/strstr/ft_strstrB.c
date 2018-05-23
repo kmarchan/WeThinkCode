@@ -1,27 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/22 08:12:49 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/23 09:46:17 by kmarchan         ###   ########.fr       */
+/*   Created: 2018/05/21 13:56:42 by kmarchan          #+#    #+#             */
+/*   Updated: 2018/05/23 08:00:54 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *des, char *src)
+char	*ft_strstr(char *str, char *to_find)
 {
-	int i;
+	int s; 
+	int f;
 
-	i = 0;
-	while (src[i] != '\0')
+	s = 0;
+	if (ft_strcmp(to_find, "") == 0)
 	{
-		des[i] = src[i];
-		i++;
+		return ((char *)str);
 	}
-	des[i] = '\0';
-	return (des);
+	if (ft_strcmp(str, "") == 0)
+	{
+		return (NULL);
+	}
+	else
+	{
+		while (str[s] != '\0')
+		{
+			f = 0;
+			while (to_find[f] == str[s + f])
+			{
+				if (to_find[f + 1] == '\0')
+				{
+						return (str +s);
+				}
+				f++;
+			}
+			s++;
+		}
+	}
+	return (to_find);
 }

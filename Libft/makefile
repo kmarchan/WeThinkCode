@@ -9,7 +9,7 @@ SRC=	ft_putstr.c ft_putchar.c ft_putnbr.c ft_memset.c ft_putendl.c \
 OBJ=	*.o
 
 $(NAME):
-	gcc -Wall -Werror -Wextra -c $(SRC) $(HEAD)
+	gcc -Wall -Werror -Wextra -c $(SRC)
 	ar -rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
