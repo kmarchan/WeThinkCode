@@ -1,27 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/15 08:25:57 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/23 16:14:52 by kmarchan         ###   ########.fr       */
+/*   Created: 2018/05/23 09:57:02 by kmarchan          #+#    #+#             */
+/*   Updated: 2018/05/23 15:49:30 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memccpy(void *des, const void *src, int c, size_t n)
 {
-	unsigned char	*p;
-	unsigned char	*s;
+	unsigned char	*a;
+	unsigned char	*b;
+	size_t			i;
 
-	p = (unsigned char *)dest;
-	s = (unsigned char *)src;
-	while (p != (unsigned char *)dest + n)
+	i = 0;
+	a = (unsigned char *)src;
+	b = (unsigned char *)des;
+	if (ft_strcmp((char *)src, "") == 0)
 	{
-		*p++ = *s++;
+		*b = '\0';
+		return (des);
 	}
-	return (dest);
+	while (i < n)
+	{
+		*b++ = *a++;
+		if (*a == (unsigned char)c)
+		{
+			*b = *a;
+			return (b + 1);
+		}
+		i++;
+	}
+	return (NULL);
 }

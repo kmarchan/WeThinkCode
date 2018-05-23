@@ -6,7 +6,7 @@
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 08:32:58 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/23 09:46:38 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/05/23 15:47:12 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strncpy(char *des, char *src, size_t n)
 		des[i] = src[i];
 		i++;
 	}
-	while (i !=  n)
+	while (i != n)
 		des[i++] = '\0';
 	return (des);
 }
