@@ -1,32 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/23 16:54:48 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/24 09:28:43 by kmarchan         ###   ########.fr       */
+/*   Created: 2018/05/24 11:29:18 by kmarchan          #+#    #+#             */
+/*   Updated: 2018/05/24 13:14:43 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+char	*ft_strcat(char *s1, const char *s2)
 {
-	unsigned char	*f;
-	unsigned char	*s;
+	char	*p;
 	size_t	i;
+	size_t	s;
 
-	i = 0;
-	f = (unsigned char *)s1;
-	s = (unsigned char *)s2;
-
-	while (f[i] == s[i])
+	p = s1;
+	s = 0;
+	i = ft_strlen(s1);
+	while (s2[s] != '\0')
 	{
+		s1[i] = s2[s];
 		i++;
-		if (i >= n)
-			return (0);
+		s++;
 	}
-	return ((unsigned char)f[i] - (unsigned char)s[i]);
+	s1[i]= '\0';
+	return (s1);
 }
