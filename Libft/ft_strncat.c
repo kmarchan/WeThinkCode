@@ -14,11 +14,9 @@
 
 char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	char	*p;
 	size_t	i;
 	size_t	s;
 
-	p = s1;
 	s = 0;
 	i = ft_strlen(s1);
 	while (s2[s] != '\0' && s < n)
