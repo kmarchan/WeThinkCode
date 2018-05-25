@@ -6,7 +6,7 @@
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 15:39:17 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/23 16:32:50 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/05/25 10:38:58 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	if (d > s)
 	{
 		while (n--)
-			d[n] = s[n];	
+			d[n] = s[n];
 	}
 	else
 	{

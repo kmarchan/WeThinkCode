@@ -6,7 +6,7 @@
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/24 13:37:20 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/24 14:32:11 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/05/25 10:36:38 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dlen)
 	{
 		dest[i++] = src[s++];
 	}
-	if (dlen > 0 || ft_strlen(dest) < dlen)
+	if (dlen > 0 || i != dlen)
 		dest[i] = '\0';
 	return (i);
 }
