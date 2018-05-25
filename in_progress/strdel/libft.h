@@ -30,7 +30,6 @@ void	ft_putendl(const char *s);
 void	ft_putstr(const char *s);
 void	ft_putnbr(int n);
 void	ft_strdel(char **as);
-void	ft_strclr(char *s);
 char	*ft_strnew(size_t size);
 char	*ft_strcat(char *s1, const char *s2);
 char	*ft_strncat(char *s1, const char *s2, size_t n);
