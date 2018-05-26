@@ -42,6 +42,8 @@ char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *hay, const char *ned, size_t n);
 char	*ft_strcpy(char *des, char *src);
 char	*ft_strncpy(char *s1, char *s2, size_t n);
+char	*ft_strsub(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *pre, char const *suf);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcat(char *s1, const char *s2, size_t dlen);
 int		ft_strequ(char const *s1, char const *s2);
