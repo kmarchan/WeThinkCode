@@ -17,20 +17,15 @@ int main()
 	size_t size = 514;
 	//char *cmp = malloc(size);
 	int diff;
+        //
 	void *test = ft_memalloc(size);
 	void *ret = ft_memalloc(size);
 	//bzero(cmp, size);
-	ft_bzero(test, size);
-	ft_bzero(ret, size);
 	diff = memcmp(test, ret, size);
 	printf("memalloc cmp %i\n", diff);
-	//printf("hello?\n");
-	ft_memdel(&test);
-	if (!test)
-		printf("memory deleted");
-	//printf("its me\n");
-	//free(ret);
-	//diff = memcmp(test, ret, size);
-	//printf("memdel cmp %i\n", diff);
+	ft_memdel(test);
+	free(ret);
+	diff = memcmp(test, ret, size);
+	printf("memdel cmp %i\n", diff);
 
 }
