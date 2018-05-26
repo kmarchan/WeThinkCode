@@ -44,6 +44,8 @@ char	*ft_strcpy(char *des, char *src);
 char	*ft_strncpy(char *s1, char *s2, size_t n);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcat(char *s1, const char *s2, size_t dlen);
+int		ft_strequ(char const *s1, char const *s2);
+int		ft_strnequ(char const *s1, char const *s2, size_t n);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
