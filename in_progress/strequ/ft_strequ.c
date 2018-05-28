@@ -1,24 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/26 08:59:11 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/28 08:16:32 by kmarchan         ###   ########.fr       */
+/*   Created: 2018/05/26 12:51:31 by kmarchan          #+#    #+#             */
+/*   Updated: 2018/05/28 08:59:43 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
 
-char	*ft_strnew(size_t size)
+int	ft_strequ(char const *s1, char const *s2)
 {
-	char *str;
-
-	str = (char *)ft_memalloc(size + 1);
-	if (str != NULL)
-		return (str);
-	else
-		return (NULL);
+	if (!(s1 && s2))
+		return (0);
+	if (ft_strcmp(s1, s2) == 0)
+		return (1);
+	else 
+		return (0);
 }

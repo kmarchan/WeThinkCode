@@ -6,7 +6,7 @@
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/24 13:37:20 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/26 11:00:11 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/05/28 11:38:31 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dlen)
 	lacat = (ft_strlen(dest) + ft_strlen(src));
 	dsl = (ft_strlen(dest));
 	mcpy = (dlen - dsl - 1);
-   	if (dlen < dsl + 1)
+	if (dlen < dsl + 1)
 		return (ft_strlen(src) + dlen);
 	while (src[i] != '\0' && i < mcpy)
 	{
@@ -31,4 +31,4 @@ size_t	ft_strlcat(char *dest, const char *src, size_t dlen)
 	}
 	dest[dsl] = '\0';
 	return (lacat);
-}	
+}

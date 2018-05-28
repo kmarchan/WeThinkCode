@@ -3,9 +3,9 @@
 
 int main()
 {
-	char *s = " 	 hello world 	\n";
+	char *s = "   \t  \n\n \t\t  \n\n\n   \n \n \t\t\n  ";
 
-	printf("input %s\n", s);
-	printf("output %s\n", ft_strtrim(s));
+	printf("input%stest\n", s);
+	printf("output%stest\n", ft_strtrim(s));
 	return (0);
 }
