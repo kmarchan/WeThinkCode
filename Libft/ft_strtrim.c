@@ -11,7 +11,6 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
 
 char	*ft_strtrim(char const *s)
 {
@@ -29,8 +28,6 @@ char	*ft_strtrim(char const *s)
 	while (ft_isspace(s[e - 1]))
 		e--;
 	n = (e - i);
-	//printf("len = %zu", ft_strlen(s));
-	//printf("i = %zu\ne = %zu\nn = %zu\n", i, e, n);
 	if (i > e)
 		return ("");
 	t = (char *)ft_strsub(s, i, n);
