@@ -5,7 +5,7 @@ SRC=	ft_putstr.c ft_putchar.c ft_putnbr.c ft_memset.c ft_putendl.c \
    	ft_strncmp.c ft_memcmp.c ft_memmove.c ft_memchr.c ft_strcat.c \
 	ft_memdel.c ft_strnew.c ft_strdel.c ft_strclr.c ft_strequ.c \
 	ft_countword.c ft_strsplit.c ft_strtrimc.c ft_strarr.c ft_striter.c \
-	ft_striteri.c \
+	ft_striteri.c ft_strmap.c ft_strmapi.c \
 	ft_strnequ.c ft_strsub.c ft_strjoin.c ft_isspace.c ft_strtrim.c \
    	ft_strncat.c ft_strlcat.c ft_strchr.c ft_strrchr.c ft_memalloc.c\
 	ft_strdup.c ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
