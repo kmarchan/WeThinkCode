@@ -1,28 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_strarr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/29 07:30:28 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/29 10:58:20 by kmarchan         ###   ########.fr       */
+/*   Created: 2018/05/29 07:50:43 by kmarchan          #+#    #+#             */
+/*   Updated: 2018/05/29 11:00:11 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_strsplit(char const *s, char c)
-{	
-	size_t	w;
-	char	**ar;
-	
-	if (!s)
+char	**ft_strarr(const char *s, char **dest,  char c, size_t w)
+{
+	size_t	i;
+	size_t	n;
+	size_t	a;
+
+	i = 0;
+	a = 0;
+	if (!dest)
 		return (NULL);
-	w = ft_countcword(s, c);
-	ar = (char **)ft_memalloc(sizeof(char *) * (w + 1));
-	ft_strarr(s, ar, c, w);
-	if (!ar)
-		return (NULL);
-	return (ar);
+	while (s[i] && a < w)
+	{
+		n = 0;
+		while (s[i] == c)
+			i++;
+		while (s[i] != c)
+		{
+			n++;
+			i++;
+		}
+		dest[a] = ft_strsub(s, i - n, n);
+		a++;
+	}
+	dest[a] = (NULL);
+	return (dest);
 }

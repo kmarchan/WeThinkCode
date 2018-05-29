@@ -6,7 +6,7 @@
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 14:15:52 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/24 14:22:49 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/05/29 08:35:06 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ char	*ft_strjoin(char const *pre, char const *suf);
 char	*ft_strtrim(char const *s);
 char	*ft_strtrimc(char const *s, char c);
 char	**ft_strsplit(char const *s, char c);
+char	**ft_strarr(char const *s, char **dest, char c, size_t w);
 size_t	ft_countcword(char const *s, char c);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcat(char *s1, const char *s2, size_t dlen);
