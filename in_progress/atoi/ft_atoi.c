@@ -1,26 +1,43 @@
-/* ascii to intiger: 
-	maybe ascii character - '0' = (int)arg. or something. remember this is a function.
-*/
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/05/21 14:39:57 by kmarchan          #+#    #+#             */
+/*   Updated: 2018/05/30 14:51:58 by kmarchan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int ft_atoi(const char *str)
+#include "libft.h"
+#include <stdio.h>
+
+int	ft_atoi(const char *s)
 {
-	int n;
-	int i = 0;
-	int count;
-	while (str[i] != '\0')
-	{
-		i++;
-		count++;
-	
-	}
-	int  num[count] = {str};	
+	int i;
+	int a;
+	int neg;
+
 	i = 0;
-	while (str[i] != '\0')
+	a = 0;
+	neg = 0;
+	while (ft_isspace(s[i]))
 	{
-		num[n] = (str[i] - 0);
-		str[i] = num[n];
 		i++;
-		n++;
-	}	
-	return ((int)str);
+	}
+//	if (s[i] == '-' && ft_isdigit(s[i + 1]))
+	while (s[i] == '-' || s[i] =='+')
+		i++;
+	neg = i;
+		//printf("%d\n", i);
+	while (ft_isdigit(s[i]))
+	{
+		a = (a * 10) + (s[i] - '0');
+		i++;
+	}
+	if (s[neg - 1] == '-')
+		a *= -1;
+	return (a);
 }
+

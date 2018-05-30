@@ -6,38 +6,42 @@
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 14:39:57 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/30 14:51:58 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/05/30 14:45:49 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+//#include <stdio.h>
 
-int	ft_atoi(const char *s)
+int	ft_atoi(const char *str)
 {
 	int i;
-	int a;
+	int b;
 	int neg;
 
 	i = 0;
-	a = 0;
-	neg = 0;
-	while (ft_isspace(s[i]))
+	b = 0;
+	if (!str)
+		return (0);
+	//if (str[i] == '-')
+	//	i++;
+	while (/*ft_isspace(str[i]) ||*/!ft_isdigit(str[i]))
 	{
-		i++;
+			if (((str[i] == '-' || str[i] == '+') && !ft_isdigit(str[i + 1]))
+				   	|| ft_isalpha(str[i]))
+					return (0);
+			 i++;
 	}
-//	if (s[i] == '-' && ft_isdigit(s[i + 1]))
-	while (s[i] == '-' || s[i] =='+')
-		i++;
 	neg = i;
-		//printf("%d\n", i);
-	while (ft_isdigit(s[i]))
+	while (ft_isdigit(str[i]))
 	{
-		a = (a * 10) + (s[i] - '0');
+		if (str[i] == 0)
+			return (0);
+	//	printf("i =%d str[i] =%c\n", i, str[i]);
+		b = (b * 10) + (str[i] - '0');
 		i++;
 	}
-	if (s[neg - 1] == '-')
-		a *= -1;
-	return (a);
+	if (str[neg - 1] == '-')
+		b *= -1;
+	return (b);
 }
-

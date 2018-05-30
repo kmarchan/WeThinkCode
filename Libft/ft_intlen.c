@@ -1,20 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isspace.c                                       :+:      :+:    :+:   */
+/*   ft_intlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/28 08:02:39 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/30 13:23:27 by kmarchan         ###   ########.fr       */
+/*   Created: 2018/05/30 10:11:33 by kmarchan          #+#    #+#             */
+/*   Updated: 2018/05/30 10:37:46 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isspace(char c)
+#include "libft.h"
+
+size_t	ft_intlen(int n)
 {
-	if (c == ' ' || c == '\n' || c == '\t' || c == '\v' ||c == '\f' 
-			||c == '\r')
-		return (1);
-	else
+	int		temp;
+	size_t	i;
+
+	i = 0;
+	if (!n)
 		return (0);
+	temp = n;
+	if (n < 0)
+	{
+		i++;
+		temp *= -1;
+	}
+	while (temp > 0)
+	{
+		temp = temp / 10;
+		i++;
+	}
+	return (i);
 }
