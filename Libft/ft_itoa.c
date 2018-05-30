@@ -6,7 +6,7 @@
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/30 08:36:09 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/30 09:07:10 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/05/30 09:44:00 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,13 @@ char	*ft_itoa(int n)
 	i = 0;
 //	if (!n)
 //		return (NULL);
-	if (n == (-2147483647 - 1))
+	if (n == (-2147483648))
 	{
-		s = ft_strnew(ft_strlen("-2147483648"));
-		if (!s)
-			return (NULL);
-		ft_strcpy(s, "-2147483648");
+	//	s = ft_strnew(ft_strlen("-2147483648"));
+	//	if (!s)
+	//		return (NULL);
+		return ft_strdup("-2147483648");
+	
 	}
 	if (n < 0)
 	{
@@ -39,7 +40,7 @@ char	*ft_itoa(int n)
 		temp = temp / 10;
 		i++;
 	}
-	s = ft_strnew(i);
+	s = ft_strnew(i + 1);
 	if (!s)
 		return (NULL);
 	if (n < 0)
@@ -54,5 +55,6 @@ char	*ft_itoa(int n)
 			s[--i] = (n % 10 + '0');
 			n = n / 10;
 	}
+	s[ft_strlen(s)] = '\0';
 	return (s);
 }

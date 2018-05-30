@@ -2,8 +2,8 @@
 #include <stdio.h>
 int main()
 {
-	int n = -623;
-	int b = -0;
+	int n = -2147483648;
+	int b = 0;
 	int c = 156;
 	char *s;
 	char *e;
