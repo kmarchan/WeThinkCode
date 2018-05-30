@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/29 07:30:28 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/30 06:56:39 by kmarchan         ###   ########.fr       */
+/*   Created: 2018/05/21 14:30:20 by kmarchan          #+#    #+#             */
+/*   Updated: 2018/05/30 06:49:22 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
-char	**ft_strsplit(char const *s, char c)
-{	
-	size_t	w;
-	char	**ar;
-	
-	if (!s)
-		return (NULL);
-	w = ft_countcword(s, c);
-	ar = (char **)ft_memalloc(sizeof(char *) * (w + 1));
-	ft_strarr(s, ar, c, w);
-	if (!ar)
-		return (NULL);
-	return (ar);
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
 }

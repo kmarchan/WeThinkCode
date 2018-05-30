@@ -1,28 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/29 07:30:28 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/30 06:56:39 by kmarchan         ###   ########.fr       */
+/*   Created: 2018/05/30 07:13:12 by kmarchan          #+#    #+#             */
+/*   Updated: 2018/05/30 08:15:40 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_strsplit(char const *s, char c)
-{	
-	size_t	w;
-	char	**ar;
-	
-	if (!s)
-		return (NULL);
-	w = ft_countcword(s, c);
-	ar = (char **)ft_memalloc(sizeof(char *) * (w + 1));
-	ft_strarr(s, ar, c, w);
-	if (!ar)
-		return (NULL);
-	return (ar);
+void	ft_putnbr_fd(int n, int fd)
+{
+	char c;
+	if (n == -2147483647 - 1)
+		ft_putstr_fd("-2147483648", fd);
+	else if (n < 0)
+	{	
+		ft_putchar_fd('-', fd);
+	//	n = n * - 1;
+		ft_putnbr_fd(-n, fd);
+	}
+	else if (n >= 10)
+	{
+		ft_putnbr_fd(n /10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
+	else
+	{
+		c = n + '0';
+		ft_putchar_fd(c, fd);
+	}
 }
