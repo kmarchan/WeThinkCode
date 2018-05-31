@@ -6,7 +6,7 @@
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 14:15:52 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/30 15:02:42 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/05/31 13:31:00 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,7 @@
 # include <string.h>
 # include <unistd.h>
 # include <stdlib.h>
-/*
-*typedef    struct        s_list
-*{
-*    void            *content;
-*    size_t            content_size;
-*    struct s_list    *next;
-*}                    t_list;
-*/
+
 void	*ft_memset(void *b, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrimc.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2018/05/31 13:36:07 by kmarchan          #+#    #+#             */
+/*   Updated: 2018/05/31 13:36:25 by kmarchan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 char	*ft_strtrimc(char const *s, char c)
@@ -15,7 +27,7 @@ char	*ft_strtrimc(char const *s, char c)
 		i++;
 	while (s[e - 1] == c)
 		e--;
-	if ( i > e)
+	if (i > e)
 		return ("");
 	n = (e - i);
 	t = (char *)ft_strsub(s, i, n);

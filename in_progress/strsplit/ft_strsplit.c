@@ -6,7 +6,7 @@
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 07:30:28 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/30 11:12:10 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/05/31 13:27:36 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 static size_t	ft_countcword(char const *s, char c)
 {
-	size_t	w;
-	size_t	i;
+	size_t		w;
+	size_t		i;
 
 	w = 0;
 	i = 0;
@@ -32,11 +32,11 @@ static size_t	ft_countcword(char const *s, char c)
 	return (w);
 }
 
-char	**ft_strsplit(char const *s, char c)
-{	
-	size_t	w;
-	char	**ar;
-	
+char			**ft_strsplit(char const *s, char c)
+{
+	size_t		w;
+	char		**ar;
+
 	if (!s)
 		return (NULL);
 	w = ft_countcword(s, c);

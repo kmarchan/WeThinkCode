@@ -6,7 +6,7 @@
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/28 07:42:27 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/31 12:03:46 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/05/31 13:36:01 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strtrim(char const *s)
 	size_t	i;
 	size_t	e;
 	size_t	n;
-	
+
 	i = 0;
 	if (!s)
 		return (NULL);

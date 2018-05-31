@@ -6,13 +6,13 @@
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/29 07:50:43 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/31 11:57:46 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/05/31 13:29:11 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	**ft_strarr(const char *s, char **dest,  char c, size_t w)
+char	**ft_strarr(const char *s, char **dest, char c, size_t w)
 {
 	size_t	i;
 	size_t	n;
