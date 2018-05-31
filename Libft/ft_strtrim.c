@@ -6,7 +6,7 @@
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/28 07:42:27 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/28 14:40:46 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/05/31 12:03:46 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ char	*ft_strtrim(char const *s)
 	size_t	i;
 	size_t	e;
 	size_t	n;
-	char	*t;
 	
 	i = 0;
 	if (!s)
@@ -29,10 +28,6 @@ char	*ft_strtrim(char const *s)
 		e--;
 	n = (e - i);
 	if (i > e)
-		return ("");
-	t = (char *)ft_strsub(s, i, n);
-	if (!t)
-		return (NULL);
-	t[n] = '\0';
-	return (t);
+		return (ft_strsub(s, 0, 0));
+	return (ft_strsub(s, i, n));
 }

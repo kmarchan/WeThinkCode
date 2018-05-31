@@ -6,7 +6,7 @@
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 16:54:48 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/25 10:35:18 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/05/31 10:27:25 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	size_t			i;
 
 	i = 0;
+	if (!n)
+		return (0);
 	f = (unsigned char *)s1;
 	s = (unsigned char *)s2;
 	while (f[i] == s[i])
