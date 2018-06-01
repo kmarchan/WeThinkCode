@@ -6,7 +6,7 @@
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/17 14:15:52 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/31 13:31:00 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/06/01 10:26:21 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
 void	ft_bzero(void *b, size_t n);
 void	ft_putchar(char c);
-void	ft_putendl(const char *s);
-void	ft_putstr(const char *s);
+void	ft_putendl(char const *s);
+void	ft_putstr(char const *s);
 void	ft_putnbr(int n);
 void	ft_putchar_fd(char c, int fd);
-void	ft_putendl_fd(const char *s, int fd);
-void	ft_putstr_fd(const char *s, int fd);
+void	ft_putendl_fd(char const *s, int fd);
+void	ft_putstr_fd(char const *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_strdel(char **as);
 void	ft_strclr(char *s);
@@ -47,8 +47,8 @@ char	*ft_strstr(const char *str, const char *to_find);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *hay, const char *ned, size_t n);
-char	*ft_strcpy(char *des, char *src);
-char	*ft_strncpy(char *s1, char *s2, size_t n);
+char	*ft_strcpy(char *des, const char *src);
+char	*ft_strncpy(char *s1, const char *s2, size_t n);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *pre, char const *suf);
 char	*ft_strtrim(char const *s);

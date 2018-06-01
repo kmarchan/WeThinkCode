@@ -6,12 +6,11 @@
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/21 14:39:57 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/31 13:30:32 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/06/01 10:05:34 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 int	ft_atoi(const char *s)
 {

@@ -13,7 +13,7 @@ SRC=	ft_putstr.c ft_putchar.c ft_putnbr.c ft_memset.c ft_putendl.c \
    	ft_isprint.c ft_strcpy.c  ft_strncpy.c ft_strrev.c ft_isupper.c \
 	ft_islower.c ft_toupper.c ft_tolower.c ft_strstr.c ft_strnstr.c \
 
-OBJ= *.o	
+OBJ= $(SRC:.c=.o)	
 
 $(NAME):
 	gcc -Wall -Werror -Wextra -c $(SRC)

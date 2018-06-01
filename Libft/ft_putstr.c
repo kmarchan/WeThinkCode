@@ -6,13 +6,13 @@
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/15 12:44:51 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/30 07:53:31 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/06/01 10:26:50 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr(const char *s)
+void	ft_putstr(char const *s)
 {
 	if (!s)
 		return ;

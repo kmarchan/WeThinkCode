@@ -6,13 +6,13 @@
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/05/23 08:32:58 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/05/23 15:47:12 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/06/01 09:58:53 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *des, char *src, size_t n)
+char	*ft_strncpy(char *des, const char *src, size_t n)
 {
 	unsigned int i;
 
