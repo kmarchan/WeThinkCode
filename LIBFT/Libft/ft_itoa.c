@@ -27,11 +27,9 @@ static char	*is_n_0(int n, int i, char *s)
 
 char		*ft_itoa(int n)
 {
-	int		temp;
 	char	*s;
 	size_t	i;
 
-	temp = n;
 	i = 0;
 	if (n == (-2147483648))
 		return (ft_strdup("-2147483648"));
