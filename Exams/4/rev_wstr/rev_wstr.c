@@ -6,12 +6,11 @@
 /*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/14 12:28:15 by exam              #+#    #+#             */
-/*   Updated: 2018/06/14 13:42:35 by exam             ###   ########.fr       */
+/*   Updated: 2018/06/15 12:50:30 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
 
 void ft_putchar(char c)
 {
@@ -26,7 +25,6 @@ void ft_putstr(char *s)
 	while (s[i] != '\0' && s[i] != ' ' && s[i] != '\t')
 	{
 		ft_putchar(s[i]);
-		s[i] = '\0';
 		i++;
 	}
 }
@@ -42,18 +40,18 @@ int ft_strlen(char *s)
 	return(i);
 }
 
-char *ft_strrchr(int i, char *s)
+int  ft_strrchr(int count, int i, char *s)
 {
-	//int i;
-	//i = ft_strlen(s);
-	while (s[i] == '\0' || s[i] == ' ' || s[i] == '\t')
-		i--;
-	while (i >= 0 && (s[i] != ' ' && s[i] != '\t'))
+	while (count--)
 	{
-		i--;
+		while (s[i] == '\0' || s[i] == ' ' || s[i] == '\t')
+			i--;
+		while (i >= 0 && (s[i] != ' ' && s[i] != '\t'))
+		{
+			i--;
+		}
 	}
-//	printf("c%i\n", i);
-	return (s + i + 1);
+	return (i + 1);
 }
 
 int	ft_chrcount(char *s)
@@ -69,27 +67,35 @@ int	ft_chrcount(char *s)
 			count++;
 		i++;
 	}	
-	return (count);
+	return (count + 1);
 }
 int main(int argc, char **argv)
 {
 	int i;
-	char *s;
-	int c; 
+	int l;
+	int count;
+	int pos;
+	int c;
+	char *s;	
 
-//	char s[] = "1 2 3 4 5 6";
+	count = 0;
 	if (argc == 2)
 	{
 		s = argv[1];
 		c = ft_chrcount(s);
 		i = ft_strlen(s);
-		while (c > 0)
-		{
-			s = ft_strrchr(ft_strlen(s), s);
-			ft_putstr(s);	
-			write (1, " ", 1);
-			c--;
-		//	printf(" %s\n", ft_strrchr(i, s));
+		l = ft_strlen(argv[1]);
+		while (c--)
+		{	
+			pos = ft_strrchr(count, i, s);
+			if (pos < l)
+			{
+				ft_putstr(s + pos);	
+				write (1, " ", 1);
+			}
+			if (count == ft_chrcount(argv[1]) - 1)
+				ft_putstr(argv[1]);
+			count++;
 		}
 	}	
 	write (1, "\n", 1);
