@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_list.h                                          :+:      :+:    :+:   */
+/*   list.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
+/*   By: zaz <zaz@staff.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/14 11:00:07 by exam              #+#    #+#             */
-/*   Updated: 2018/06/14 11:01:57 by exam             ###   ########.fr       */
+/*   Created: 2014/02/27 13:14:10 by zaz               #+#    #+#             */
+/*   Updated: 2014/02/27 13:15:29 by zaz              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-typedef struct    s_list
-{
-    struct s_list *next;
-    void          *data;
-}                 t_list;
+typedef struct s_list t_list;
 
-int	ft_list_size(t_list *begin_list);
+struct s_list
+{
+	int     data;
+	t_list  *next;
+};
