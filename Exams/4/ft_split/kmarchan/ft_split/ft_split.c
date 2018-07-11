@@ -1,16 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rev_wstr.c                                         :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: exam <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/28 11:08:20 by exam              #+#    #+#             */
-/*   Updated: 2018/06/28 11:25:02 by exam             ###   ########.fr       */
+/*   Created: 2018/06/28 10:01:13 by exam              #+#    #+#             */
+/*   Updated: 2018/06/28 11:01:58 by exam             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+/*
+ * this is ft_strsplit. takes a string and splits it into words and puts them into a string  array.
+ * what is needed:
+ * - wordcount (for malloc)
+ * - address of ' ', \n  or '\t'
+ * - find the length of the word (for malloc). 
+ * - copy each into an element of the array.  
+ */
 #include <stdlib.h>
 #include <strings.h>
 
@@ -20,9 +27,9 @@ int wordcount(char *str)
 	int c = 0;
 	while (str[i] != '\0')
 	{	
-		if ((str[i] != ' ' && str[i] != '\t') && str[i] != '\0')
+		if ((str[i] != ' ' && str[i] != '\t' && str[i] != '\n') && str[i] != '\0')
 		{
-			if (str[i + 1] == ' ' || str[i + 1] == '\t' || str[i + 1] == '\0')
+			if (str[i + 1] == ' ' || str[i + 1] == '\t' || str[i + 1] == '\n' || str[i + 1] == '\0')
 			{
 				c++;
 			}
@@ -34,7 +41,7 @@ int wordcount(char *str)
 
 char *ft_strchr(char *str)
 {
-	while (*str != ' ' && *str != '\t' && *str != '\0')
+	while (*str != ' ' && *str != '\t' && *str != '\n' && *str != '\0')
 	{
 		str++;
 	}
@@ -44,7 +51,7 @@ char *ft_strchr(char *str)
 int wordlen(char *str)
 {
 	int i = 0;
-	while (str[i] != ' ' && str[i] != '\t' && str[i] != '\0')
+	while (str[i] != ' ' && str[i] != '\t' && str[i] != '\n' && str[i] != '\0')
 	{
 			i++;
 	}
@@ -64,7 +71,7 @@ char **ft_split(char *str)
 	{
 		i = 0;
 		ar[e] = (char *)malloc(sizeof(char) * wordlen(str) + 1);
-		while (str[i] != ' ' && str[i] != '\t' && str[i] != '\0')
+		while (str[i] != ' ' && str[i] != '\t' && str[i] != '\n' && str[i] != '\0')
 		{
 			ar[e][i] = str[i];
 			i++;
@@ -77,7 +84,7 @@ char **ft_split(char *str)
 		i = 0;
 		str = ft_strchr(str);
 		ar[e] = (char *)malloc(sizeof(char) * wordlen(str) + 1);
-		while (str[i] != ' ' && str[i] != '\t' && str[i] != '\0')
+		while (str[i] != ' ' && str[i] != '\t' && str[i] != '\n' && str[i] != '\0')
 		{
 			ar[e][i] = str[i];
 			i++;
@@ -87,38 +94,4 @@ char **ft_split(char *str)
 	}
 	ar[e] = NULL;
 	return (ar);
-}
-
-void ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-void ft_putstr(char *str)
-{
-	int i = 0;
-	while (str[i] != '\0')
-	{
-		ft_putchar(str[i]);
-		i++;
-	}
-}
-
-int main(int argc, char **argv)
-{
-	char **ar;
-	int w;
-	if (argc == 2)
-	{
-		w = wordcount(argv[1]);
-		ar = ft_split(argv[1]);
-		while (w--)
-		{
-			ft_putstr(ar[w]);
-			if (w != 0)
-				ft_putchar(' ');
-		}
-	}
-	ft_putchar('\n');
-	return (0);
 }
