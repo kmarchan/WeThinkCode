@@ -46,25 +46,6 @@ int	intlen(unsigned int n)
 	return (count);
 }
 
-char *ft_itoa(unsigned int n)
-{
-	char *num;
-	int i;
-	if (n == 0)
-		return ("0");
-	if (n == 2147483647)
-		return ("2147483647");
-	i = intlen(n);
-	num = (char *)malloc(sizeof(char) * intlen(n) + 1);
-	num[i] = '\0';
-	while (n > 0)
-	{
-		num[--i] = (n % 10) + '0';
-		n /= 10;
-	}
-	return (num);
-}
-
 char *strjoin(char *pre, char *suf)
 {
 	char *ret;
@@ -85,6 +66,90 @@ char *strjoin(char *pre, char *suf)
 	ret[i] = '\0';
 	return (ret);
 }
+
+char *ft_itoa(unsigned int n)
+{
+	char *num;
+	int i;
+	if (n == 0)
+		return ("0");
+	if (n == 2147483647)
+		return ("2147483647");
+	i = intlen(n);
+	num = (char *)malloc(sizeof(char) * intlen(n) + 1);
+	num[i] = '\0';
+	while (n > 0)
+	{
+		num[--i] = (n % 10) + '0';
+		n /= 10;
+	}
+	return (num);
+}
+/*
+char *moment_pip(unsigned int duration)
+
+{
+	char *ret;
+	if (duration == 1)
+	{
+		ret = strjoin(ft_itoa(duration), " second ago.");
+		return (ret);
+
+	}
+	if (duration < 60)
+	{
+		ret = strjoin(ft_itoa(duration), " seconds ago.");
+		return (ret);
+	}
+
+	if (duration == 60)
+	{
+		ret = strjoin(ft_itoa(duration / 60), " minute ago.");
+		return (ret);
+	}
+	if (duration < 3600)
+	{
+		ret = strjoin(ft_itoa(duration / 60), " minutes ago.");
+		return (ret);
+	}
+	if (duration / 3600 == 1)
+	{
+		ret = strjoin(ft_itoa(duration / 3600), " hour ago.");
+		return (ret);
+	}
+	if (duration < 86400)
+	{
+		ret = strjoin(ft_itoa(duration / 3600), " hours ago.");
+		return (ret);
+	}
+	if (duration / 86400 == 1)
+	{
+		ret = strjoin(ft_itoa(duration / 86400), " day ago.");
+		return (ret);
+	}
+	if (duration < 2592000)
+	{
+		ret = strjoin(ft_itoa(duration / 86400), " days ago.");
+		return (ret);
+	}
+	if (duration == 2592000)
+	{
+		ret = strjoin(ft_itoa(30), " days ago.");
+		return (ret);
+	}
+	if (duration / 2592000 == 1)
+	{
+		ret = strjoin(ft_itoa(duration / 2592000), " month ago.");
+		return (ret);
+	}
+	if (duration > 2592000)
+	{
+		ret = strjoin(ft_itoa(duration / 2592000), " months ago.");
+		return (ret);
+	}
+	return (NULL);
+}
+*/
 
 char	*moment(unsigned int duration)
 {
@@ -124,7 +189,7 @@ char	*moment(unsigned int duration)
 	else 
 	{
 		unit = " months ago.";
-		time = ft_itoa(duration / 259200);
+		time = ft_itoa(duration / 2592000);
 	}
 	ret = strjoin(time, unit);
 	return (ret);
@@ -138,6 +203,8 @@ int	main(int argc, char **argv)
 	dur = atoi(argv[1]);
 	ret = moment(dur);
 	printf("dur = %d\n", dur);
-	printf("%s\n", ret);
+	printf("K = %s\n", ret);
+	ret = moment_pip(dur);
+	printf("pip = %s\n", ret);
    return (0);	
 }
