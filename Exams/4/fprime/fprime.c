@@ -5,50 +5,46 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/24 14:56:20 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/06/25 13:08:22 by kmarchan         ###   ########.fr       */
+/*   Created: 2018/07/26 08:00:32 by kmarchan          #+#    #+#             */
+/*   Updated: 2018/07/26 08:50:23 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+/* 
+ * find prime factorials
+ * put '*' between the numbers
+ */
 #include <stdlib.h>
+#include <stdio.h>
 
-int is_fact(int n, int in)
-{
-	if (in % n == 0)
-		return (1);
-	else 
-		return (0);
-}
-
-int	main(int argc, char **argv)
+int main(int argc, char **argv)
 {
 	int in;
-	int n;
-
+	int n = 2;
 	if (argc == 2)
 	{
-		in = (atoi(argv[1]));
-		n = 2;
-		if (in == 1)
-			printf("1");
-		if (in < 0)
-			return (0);
-		while(n <= in)
+		in = atoi(argv[1]);
+		if (in == 0)
 		{
-				if (in % n == 0)
-				{
-					printf("%d", n);
-					if (n == in)
-						return(1);
+			printf("0");
+		}
+		if (in == 1)
+		{
+			printf("1");
+		}
+		while (in > n)
+		{
+			while (in % n == 0)
+			{
+				printf("%d", n);
+				if (in != n)
 					printf("*");
-					in /= n;
-					n = 1;
-				}
-				n++;
+				in /= n;
 			}
-		}	
-	
+			n++;
+		}
+		if (in == n)
+			printf("%d", n);
+	}
 	printf("\n");
-	return (1);
 }
