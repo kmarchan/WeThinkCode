@@ -1,29 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: kmarchan <kmarchan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/06/05 08:19:18 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/08/23 17:42:12 by kmarchan         ###   ########.fr       */
+/*   Created: 2018/08/23 17:54:56 by kmarchan          #+#    #+#             */
+/*   Updated: 2018/08/23 17:59:35 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
-# include "libft.h"
-# include <fcntl.h>
+#include "libft.h"
 
-# define BUFF_SIZE 50000
-
-typedef struct	s_lst
+void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	char		*ovr;
-	char		*hold;
-	int			fd;
-}				t_ins;
-
-int				get_next_line(const int fd, char **line);
-
-#endif
+	if ((*alst)->next)
+		ft_lstdel(alst, (del));
+	free(*alst);
+}

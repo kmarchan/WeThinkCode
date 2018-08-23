@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: kmarchan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: kmarchan <kmarchan@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/06/08 07:45:48 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/06/13 07:31:56 by kmarchan         ###   ########.fr       */
+/*   Updated: 2018/08/23 17:45:19 by kmarchan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-int			read_line(int fd, char *buf, t_ins *node)
+static int			read_line(int fd, char *buf, t_ins *node)
 {
 	int				in;
 	int				count;
@@ -41,7 +41,7 @@ int			read_line(int fd, char *buf, t_ins *node)
 		return (0);
 }
 
-int			remaining(t_ins *node, char *ptr, char **line)
+static int			remaining(t_ins *node, char *ptr, char **line)
 {
 	int				cont;
 
@@ -58,7 +58,7 @@ int			remaining(t_ins *node, char *ptr, char **line)
 	return (cont);
 }
 
-int			manage_line(t_ins *node, int fd, char *buf, char **line)
+static int			manage_line(t_ins *node, int fd, char *buf, char **line)
 {
 	int				in;
 	char			*ptr;
@@ -86,7 +86,7 @@ int			manage_line(t_ins *node, int fd, char *buf, char **line)
 	return (0);
 }
 
-int			get_next_line(const int fd, char **line)
+int					get_next_line(const int fd, char **line)
 {
 	int				in;
 	char			buf[BUFF_SIZE + 1];
