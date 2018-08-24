@@ -6,7 +6,7 @@
 #    By: kmarchan <kmarchan@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/06/02 14:29:33 by kmarchan          #+#    #+#              #
-#    Updated: 2018/08/23 18:17:46 by kmarchan         ###   ########.fr        #
+#    Updated: 2018/08/24 17:49:49 by kmarchan         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ SRC=	ft_putstr.c ft_putchar.c ft_putnbr.c ft_memset.c ft_putendl.c \
    	ft_isprint.c ft_strcpy.c  ft_strncpy.c ft_strrev.c ft_isupper.c \
 	ft_islower.c ft_toupper.c ft_tolower.c ft_strstr.c ft_strnstr.c \
 	get_next_line.c ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c \
-	ft_lstiter.c ft_lstmap.c \
+	ft_lstiter.c ft_lstmap.c free_lst.c\
 
 OBJ= $(SRC:.c=.o)
 
