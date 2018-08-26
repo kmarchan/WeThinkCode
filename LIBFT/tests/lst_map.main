@@ -1,0 +1,36 @@
+
+// #include <stdio.h>
+
+// int	main(void)
+// {
+// 	t_list *node1 = (t_list *)malloc(sizeof(t_list));
+// 	t_list *node2 = (t_list *)malloc(sizeof(t_list));
+// 	t_list *node3 = (t_list *)malloc(sizeof(t_list));
+// 	t_list *node4 = (t_list *)malloc(sizeof(t_list));
+// 	t_list *node5 = (t_list *)malloc(sizeof(t_list));
+// 	t_list *new;
+
+// 	node1->next = node2;
+// 	node2->next = node3;
+// 	node3->next = node4;
+// 	node4->next = node5;
+// 	node5->next = NULL;
+
+// 	node1->content = "tutu";
+// 	node2->content = "tata";
+// 	node3->content = "toto";
+// 	node4->content = "inin";
+// 	node5->content = "upup";
+
+// 	new = ft_lstmap(node1, bzer);
+// 	int c;
+// 	c = 0;
+// 	while (node1)
+// 	{
+// 		printf("%d, %s, %d\n", c, (char *)node1->content, (int)new);
+// 		node1 = node1->next;
+// 		new = new->next;
+// 		c++;
+// 	}
+// 	return (0);
+// }
