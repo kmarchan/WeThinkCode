@@ -1,15 +1,15 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   WETHINKCODE.c                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By:<kmarchan@student.wethinkcode.co.za>        +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/05/14 17:09:15 by kmarchan          #+#    #+#             */
-/*   Updated: 2018/09/12 08:53:33 by kmarchan         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-# always <learning>
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By:<kmarchan@student.wethinkcode.co.za>        +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2018/05/14 11:12:55 by kmarchan          #+#    #+#              #
+#    Updated: 2018/09/11 07:42:24 by kmarchan         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+always learning
 
 This repository contains some of my early work at WeThinkCode -CPT. 
 Including the first project, Libft and some exam practice. 
